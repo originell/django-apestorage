@@ -11,7 +11,18 @@ Therefore I have written this storage engine. In case a file is not found,
 an image from placeape.com_ will be used/displayed
 instead.
 
-If you are sick of apes, you might want to check out _django-dogstorage_.
+If you are sick of apes, you might want to check out django-dogstorage_ or django-kittenstorage_.
+
+sorl-thumbnail users
+====================
+
+Note that newer versions of sorl-thumbnail have an integrated dummy engine, which
+can load images from various dummy sources. This is super cool and I highly recommend
+this over dogstorage. Go and have a look at THUMBNAIL_DUMMY_.
+
+The setting for placeholder apes source would be:
+
+    ``THUMBNAIL_DUMMY_SOURCE = http://placeape.com/%(width)s/%(height)s``
 
 Setup
 =====
@@ -45,7 +56,9 @@ APE_SIZE
     A tuple of format `(width, height)`, specifiying the size of the image 
     requested from placeape__.
 
-
+.. _django-kittenstorage: https://github.com/originell/django-kittenstorage/
+.. _django-dogstorage: https://github.com/originell/django-dogstorage/
+.. _THUMBNAIL_DUMMY: http://sorl-thumbnail.readthedocs.org/en/latest/reference/settings.html#thumbnail-dummy
 .. _placeape.com: http://placeape.com/
 __ placeape.com_
 
