@@ -24,6 +24,10 @@ The setting for placeholder apes source would be:
 
     ``THUMBNAIL_DUMMY_SOURCE = http://placeape.com/%(width)s/%(height)s``
 
+or if you prefer grayscale:
+
+    ``THUMBNAIL_DUMMY_SOURCE = http://placeape.com/g/%(width)s/%(height)s``
+
 Setup
 =====
 It's on pypi.
